@@ -1,0 +1,52 @@
+// WordPress block styles.
+// Used in `components/ContentWrapper`
+
+@use 'sass:math';
+
+@import 'breakpoints';
+
+@import '@wordpress/base-styles/mixins';
+@import '@wordpress/base-styles/colors.native';
+@import '@wordpress/base-styles/z-index';
+@import '@wordpress/base-styles/default-custom-properties';
+@import '@wordpress/base-styles/colors';
+@import '@wordpress/base-styles/variables';
+@import '@wordpress/base-styles/breakpoints';
+@import '@wordpress/block-library/src/style';
+@import '@wordpress/block-library/src/theme';
+
+/******************************************************
+Block: Client Logos
+******************************************************/
+.client-logos {
+  @apply flex justify-center gap-16 mb-8;
+
+  @media (max-width: $breakpoint-small) {
+    @apply gap-8;
+  }
+  
+  .logo {
+    max-width: fit-content;
+
+    &:first-child  {
+      img {
+        height: 80px;
+      }
+      @apply border-r-2 pr-10 border-purple-900;
+
+      @media (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+
+    img {
+      height: 70px;
+      max-width: 200px;
+      @media (max-width: $breakpoint-small) {
+        max-width: 100px;
+      }
+    }
+
+  }
+
+}

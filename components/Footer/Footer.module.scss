@@ -1,0 +1,16 @@
+.component {
+	@apply border-solid border border-slate-300;
+	background-color: rgba(229, 231, 235, 0.8);
+	color: var(--wpe--color--purple);
+	padding-top: 3rem;
+	padding-bottom: 0;
+	margin-top: 8rem;
+}
+
+.copyright {
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+	text-align: center;
+	color: var(--wpe--footer--color);
+	@apply text-sm tracking-wide;
+}
